@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>conf</module>
+        <module>common</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -27,10 +28,25 @@
         <mysql-connector.version>8.0.16</mysql-connector.version>
         <orika.version>1.5.4</orika.version>
         <jooq-java-8.version>0.9.11</jooq-java-8.version>
+        <common-lang3.version>3.9</common-lang3.version>
+        <common-collections4.version>4.3</common-collections4.version>
     </properties>
     <dependencyManagement>
 
         <dependencies>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${common-collections4.version}</version>
+            </dependency>
+
 
             <!--            高效的lambda表达式框架-->
             <dependency>

@@ -38,7 +38,11 @@
                 <artifactId>joor-java-8</artifactId>
                 <version>${jooq-java-8.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
 
             <!--   Java高效的bean转换框架-->
             <dependency>

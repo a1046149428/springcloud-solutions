@@ -5,7 +5,6 @@ import fun.bryce.util.JsonUtils;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
-import org.springframework.http.ResponseEntity;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -181,8 +180,23 @@ public class RespEntity<T>
 
     }
 
-    public static ResponseEntity unauthorized(String s)
+    public static RespEntity unauthorized(String s)
     {
+        return new RespEntity<>(RespCode.UNAUTHORIZED.getRespCode(), s);
+
+    }
+
+
+    public static RespEntity internalServerError()
+    {
+        return new RespEntity<>(RespCode.INTERNAL_SERVER_ERROR.getRespCode(), RespCode.INTERNAL_SERVER_ERROR.getRespMsg());
+
+    }
+
+    public static RespEntity internalServerError(String msg)
+    {
+        return new RespEntity<>(RespCode.INTERNAL_SERVER_ERROR.getRespCode(), msg);
+
     }
 
     public RespEntity add(final String key, final Object value)

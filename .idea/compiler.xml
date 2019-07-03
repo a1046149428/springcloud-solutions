@@ -6,20 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="conf" />
         <module name="common" />
+        <module name="log4j2" />
+        <module name="conf" />
+        <module name="generator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="conf" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="Gen" target="1.8" />
+      <module name="generator" target="1.8" />
+      <module name="log4j2" target="1.8" />
       <module name="springcloud-solutions" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gen" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="conf" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="generator" options="-parameters" />
+      <module name="log4j2" options="-parameters" />
     </option>
   </component>
 </project>

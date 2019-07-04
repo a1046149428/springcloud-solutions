@@ -8,6 +8,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/log4j2/pom.xml" />
+        <option value="$PROJECT_DIR$/logback/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

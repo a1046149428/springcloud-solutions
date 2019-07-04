@@ -40,10 +40,17 @@
         <disruptor.version>3.4.2</disruptor.version>
         <log4j2-logstash-layout.version>0.19</log4j2-logstash-layout.version>
         <jansi.version>1.18</jansi.version>
+        <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash-logback-encoder.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.fusesource.jansi</groupId>
                 <artifactId>jansi</artifactId>

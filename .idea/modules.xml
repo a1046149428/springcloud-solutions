@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/conf/conf.iml" filepath="$PROJECT_DIR$/conf/conf.iml" />
       <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/log4j2/log4j2.iml" filepath="$PROJECT_DIR$/log4j2/log4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logback/logback.iml" filepath="$PROJECT_DIR$/logback/logback.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-solutions.iml" filepath="$PROJECT_DIR$/.idea/springcloud-solutions.iml" />
     </modules>
   </component>

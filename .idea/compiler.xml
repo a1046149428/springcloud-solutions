@@ -6,33 +6,46 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="logback" />
+        <module name="log4j2" />
         <module name="common" />
+        <module name="logback" />
         <module name="generator" />
         <module name="conf" />
-        <module name="log4j2" />
+        <module name="mybatis-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="conf" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="eureka-registry" target="1.8" />
+      <module name="eurekaregistry" target="1.8" />
       <module name="Gen" target="1.8" />
       <module name="generator" target="1.8" />
       <module name="log4j2" target="1.8" />
       <module name="logback" target="1.8" />
+      <module name="mybatis-test" target="1.8" />
       <module name="springcloud-solutions" target="1.8" />
+      <module name="UAA" target="1.8" />
+      <module name="zuulgateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Gen" options="-parameters" />
+      <module name="UAA" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="conf" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="eureka-registry" options="-parameters" />
+      <module name="eurekaregistry" options="-parameters" />
       <module name="generator" options="-parameters" />
       <module name="log4j2" options="-parameters" />
       <module name="logback" options="-parameters" />
+      <module name="mybatis-test" options="-parameters" />
+      <module name="zuulgateway" options="-parameters" />
     </option>
   </component>
 </project>

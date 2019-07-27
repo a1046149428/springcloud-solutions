@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.bryce.mybatistest.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="fun.bryce.mybatistest.domain.bean.User">
+        <result column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_name, create_time, update_time, create_user, update_user
+    </sql>
+    <select id="queryUser" resultMap="user">
+
+        select
+        u.id,
+        u.user_name,
+        l.id,
+        l.title
+
+        from t_user u
+                 join t_log l on l.user_id = u.id;
+    </select>
+
+    <!-- resultMap:映射实体类和字段之间的一一对应的关系 -->
+    <resultMap id="user" type="fun.bryce.mybatistest.domain.bean.User"  extends="fun.bryce.mybatistest.mapper.LogMapper.BaseResultMap">
+
+        <collection property="logs" javaType="list" ofType="fun.bryce.mybatistest.domain.bean.Log">
+        </collection>
+    </resultMap>
+
+    <select id="log" resultType="fun.bryce.mybatistest.domain.bean.Log">
+        select
+        from t_log
+        where user_id = #{id}
+    </select>
+
+
+</mapper>

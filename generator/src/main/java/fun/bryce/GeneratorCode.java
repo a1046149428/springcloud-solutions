@@ -13,14 +13,14 @@ public class GeneratorCode
     static String jdbcUser = "root";
     static String jdbcDriver = "com.mysql.cj.jdbc.Driver";
     static String jdbcPwd = "123456";
-    static String moduleName = "clouds";
+    static String moduleName = "mybatistest";
     static String parentPackage = "fun.bryce";
     static String entityPackage = "domain.bean";
     static String controllerPackage = "web.controller";
-    static String superEntity = "base.BaseEntity";
-    static String superController = "base.BaseController";
+   // static String superEntity = "base.BaseEntity";
+    //static String superController = "base.BaseController";
     static Boolean enableCache = false;
-    static String projectPath = "D:\\codes\\springcloud-solutions\\Gen";
+    static String projectPath = "D:\\codes\\springcloud-solutions\\mybatis-test";
 
     public static void main(String[] args)
     {

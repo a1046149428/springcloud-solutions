@@ -12,6 +12,8 @@
         <module>common</module>
         <module>generator</module>
         <module>log4j2</module>
+        <module>mybatis-test</module>
+        <module>eureka-registry</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -21,7 +23,7 @@
     </parent>
     <properties>
         <lombok.version>1.18.8</lombok.version>
-        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <guava.version>28.0-jre</guava.version>
@@ -41,10 +43,23 @@
         <log4j2-logstash-layout.version>0.19</log4j2-logstash-layout.version>
         <jansi.version>1.18</jansi.version>
         <logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
+        <jackson.version>2.9.9</jackson.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+
+            </dependency>
             <dependency>
                 <groupId>net.logstash.logback</groupId>
                 <artifactId>logstash-logback-encoder</artifactId>
@@ -74,6 +89,12 @@
                 <version>${spring-boot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.velocity</groupId>
@@ -140,7 +161,6 @@
                 <groupId>com.spring4all</groupId>
                 <artifactId>swagger-spring-boot-starter</artifactId>
                 <version>${spring4all-boot-swagger.version}</version>
-
             </dependency>
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -182,7 +202,6 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-
                 <version>${spring-cloud.version}</version>
                 <scope>import</scope>
                 <type>pom</type>

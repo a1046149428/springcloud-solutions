@@ -120,13 +120,13 @@ public class MybatisPlusGenerator
         strategy.setEntitySerialVersionUID(true);
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass(GeneratorCode.superEntity);
+      //  strategy.setSuperEntityClass(GeneratorCode.superEntity);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         strategy.setEntityBuilderModel(true);
         strategy.setEntityTableFieldAnnotationEnable(true);
         strategy.setEntityBooleanColumnRemoveIsPrefix(false);
-        strategy.setSuperControllerClass(GeneratorCode.superController);
+       // strategy.setSuperControllerClass(GeneratorCode.superController);
         strategy.setVersionFieldName("version");
         strategy.setLogicDeleteFieldName("logic_delete");
         strategy.setTablePrefix(GeneratorCode.TABLE_PREFIX);

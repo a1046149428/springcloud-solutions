@@ -9,9 +9,9 @@
         <module name="log4j2" />
         <module name="common" />
         <module name="logback" />
-        <module name="generator" />
         <module name="conf" />
         <module name="mybatis-test" />
+        <module name="generator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +20,7 @@
       <module name="demo" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="eureka-registry" target="1.8" />
+      <module name="eureka-server" target="1.8" />
       <module name="eurekaregistry" target="1.8" />
       <module name="Gen" target="1.8" />
       <module name="generator" target="1.8" />
@@ -40,6 +41,7 @@
       <module name="demo" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="eureka-registry" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="eurekaregistry" options="-parameters" />
       <module name="generator" options="-parameters" />
       <module name="log4j2" options="-parameters" />

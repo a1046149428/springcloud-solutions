@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/conf/conf.iml" filepath="$PROJECT_DIR$/conf/conf.iml" />
-      <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/log4j2/log4j2.iml" filepath="$PROJECT_DIR$/log4j2/log4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cluster-eureka/cluster-eureka.iml" filepath="$PROJECT_DIR$/cluster-eureka/cluster-eureka.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/conf/conf.iml" filepath="$PROJECT_DIR$/conf/conf.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/log4j2/log4j2.iml" filepath="$PROJECT_DIR$/log4j2/log4j2.iml" group="springcloud-solutions and modules" />
       <module fileurl="file://$PROJECT_DIR$/logback/logback.iml" filepath="$PROJECT_DIR$/logback/logback.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mybatis-test/mybatis-test.iml" filepath="$PROJECT_DIR$/mybatis-test/mybatis-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-solutions.iml" filepath="$PROJECT_DIR$/.idea/springcloud-solutions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-test/mybatis-test.iml" filepath="$PROJECT_DIR$/mybatis-test/mybatis-test.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/single-eureka/single-eureka.iml" filepath="$PROJECT_DIR$/single-eureka/single-eureka.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-solutions.iml" filepath="$PROJECT_DIR$/.idea/springcloud-solutions.iml" group="springcloud-solutions and modules" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" filepath="$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" group="springcloud-solutions and modules" />
     </modules>
   </component>
 </project>

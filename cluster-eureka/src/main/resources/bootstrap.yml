@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    statusPageUrlPath: http://${eureka.instance.hostname}:${server.port}/swagger-ui.html
+    preferIpAddress: true
+    homePageUrl: https://${eureka.instance.hostname}/
+    healthCheckUrl: https://${eureka.instance.hostname}/health
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    eviction-interval-timer-in-ms: 5000
+    enable-self-preservation: false
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: ${spring.application.name} Application
+    version: ${project.version}
+  project:
+    version: ${project.version}
+

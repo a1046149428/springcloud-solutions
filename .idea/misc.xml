@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/logback/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-test/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -18,9 +19,8 @@
         <option value="$PROJECT_DIR$/Gen/pom.xml" />
         <option value="$PROJECT_DIR$/UAA/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-registry/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="12" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

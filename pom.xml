@@ -13,7 +13,9 @@
         <module>generator</module>
         <module>log4j2</module>
         <module>mybatis-test</module>
-        <module>eureka-registry</module>
+        <module>zuul-gateway</module>
+        <module>single-eureka</module>
+        <module>cluster-eureka</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -22,6 +24,14 @@
         <version>2.1.6.RELEASE</version>
     </parent>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.test.skip>true</maven.test.skip>
+        <dockerfile.maven.version>1.4.10</dockerfile.maven.version>
+        <docker.image.prefix>brycehuang</docker.image.prefix>
+        <swagger2.version>2.9.2</swagger2.version>
+        <spring-boot.version>2.1.6.RELEASE></spring-boot.version>
         <lombok.version>1.18.8</lombok.version>
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
@@ -132,11 +142,11 @@
 
 
             <!--            高效的lambda表达式框架-->
-            <dependency>
-                <groupId>org.jooq</groupId>
-                <artifactId>joor-java-8</artifactId>
-                <version>${jooq-java-8.version}</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.jooq</groupId>-->
+            <!--                <artifactId>joor-java-8</artifactId>-->
+            <!--                <version>${jooq-java-8.version}</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
@@ -208,4 +218,30 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <!--注意： 这里必须要添加，否则各种依赖有问题 -->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>${dockerfile.maven.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

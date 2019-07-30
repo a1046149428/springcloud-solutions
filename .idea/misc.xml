@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/cluster-eureka/pom.xml" />
         <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/single-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-demo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

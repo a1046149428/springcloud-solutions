@@ -16,6 +16,7 @@
         <module>zuul-gateway</module>
         <module>single-eureka</module>
         <module>cluster-eureka</module>
+        <module>consumer-demo</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

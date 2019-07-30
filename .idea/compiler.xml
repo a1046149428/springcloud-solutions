@@ -6,21 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cluster-eureka" />
         <module name="zuul-gateway" />
-        <module name="log4j2" />
+        <module name="cluster-eureka" />
         <module name="common" />
         <module name="logback" />
+        <module name="generator" />
+        <module name="consumer-demo" />
         <module name="single-eureka" />
         <module name="conf" />
         <module name="mybatis-test" />
-        <module name="generator" />
+        <module name="log4j2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cluster-eureka" target="1.8" />
       <module name="common" target="1.8" />
       <module name="conf" target="1.8" />
+      <module name="consumer-demo" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="eureka-registry" target="1.8" />
@@ -45,6 +47,7 @@
       <module name="cluster-eureka" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="conf" options="-parameters" />
+      <module name="consumer-demo" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="eureka-registry" options="-parameters" />

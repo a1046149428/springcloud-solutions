@@ -1,6 +1,17 @@
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:7777/uaa/oauth/tokon
+      user-authorization-uri: http://localhost:7777/uaa/oauth/authorize
+      client-id: zuul_gateway
+      client-secret: secret
+    resource:
+      jwt:
+        key-value: springcloud-solutions
+
 server:
   port: 8000
-  undertow:
+  undertow: # 建议采用undertow以获取更好的性能,需要排除zuul的tomcat
     worker-threads: 4000
     io-threads: 200
 eureka:
@@ -19,17 +30,26 @@ eureka:
 spring:
   application:
     name: zuul-gateway
+ribbon:
 
+  eureka:
+    enabled: false # 禁止ribbon 操作eureka
 swagger:
   enabled: true
-  title: EurekaServer
+  title: zuul-gateway
   base-package: fun.bryce
   exclude-path: /error
-  version: ${project.version}
+  version: @project.version@
 zuul:
+  forceOriginalQueryStringEncoding: true
+  decodeUrl: false
   add-host-header: true
   routes:
     demo:
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization #限定请求头
       path: /demo/**
-      serviceId: client-a
+      serviceId: consumer-demo
+  prefix: /api # 前缀
+  ignored-services: demo1,demo2  # 屏蔽服务不被路由
+  ignored-patterns:  /**/div/** #屏蔽接口不被路由
 

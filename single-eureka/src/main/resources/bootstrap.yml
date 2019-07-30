@@ -3,7 +3,7 @@ swagger:
   title: EurekaServer
   base-package: fun.bryce.singleeureka
   exclude-path: /error
-  version: ${project.version}
+  version: @project.version@
 spring:
   application:
     name: eureka-server
@@ -17,9 +17,6 @@ eureka:
     preferIpAddress: true
     homePageUrl: https://${eureka.instance.hostname}/
     healthCheckUrl: https://${eureka.instance.hostname}/health
-
-
-
   client:
     registerWithEureka: false
     fetchRegistry: false

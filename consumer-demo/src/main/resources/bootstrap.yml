@@ -1,0 +1,29 @@
+server:
+  port: 7777
+  undertow:
+    worker-threads: 100
+    io-threads: 10
+eureka:
+  instance:
+    hostname: localhost
+    appname: ${spring.application.name}
+    statusPageUrlPath: http://${eureka.instance.hostname}:${server.port}/swagger-ui.html
+    preferIpAddress: true
+    homePageUrl: https://${eureka.instance.hostname}/
+    healthCheckUrl: https://${eureka.instance.hostname}/health
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:10222/eureka/
+spring:
+  application:
+    name: consumer-demo
+
+swagger:
+  enabled: true
+  title: consumer-demo
+  base-package: fun.bryce
+  exclude-path: /error
+  version: @project.version@
+

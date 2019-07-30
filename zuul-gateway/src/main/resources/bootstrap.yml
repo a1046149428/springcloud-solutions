@@ -19,13 +19,17 @@ eureka:
 spring:
   application:
     name: zuul-gateway
+
+swagger:
+  enabled: true
+  title: EurekaServer
+  base-package: fun.bryce
+  exclude-path: /error
+  version: ${project.version}
 zuul:
-  SendErrorFilter:
-    error:
-      disable: false
-  host:
-    max-per-route-connections: 1024
-    max-total-connections: 1024
-management:
-  security:
-    enabled: false
+  add-host-header: true
+  routes:
+    demo:
+      path: /demo/**
+      serviceId: client-a
+

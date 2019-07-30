@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/logback/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-test/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-registry/pom.xml" />
+        <option value="$PROJECT_DIR$/cluster-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/single-eureka/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -18,7 +21,6 @@
         <option value="$PROJECT_DIR$/Gen/pom.xml" />
         <option value="$PROJECT_DIR$/UAA/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-registry/pom.xml" />
-        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
       </set>
     </option>
   </component>

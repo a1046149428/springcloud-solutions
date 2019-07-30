@@ -6,15 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cluster-eureka" />
+        <module name="zuul-gateway" />
         <module name="log4j2" />
         <module name="common" />
         <module name="logback" />
+        <module name="single-eureka" />
         <module name="conf" />
         <module name="mybatis-test" />
         <module name="generator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cluster-eureka" target="1.8" />
       <module name="common" target="1.8" />
       <module name="conf" target="1.8" />
       <module name="demo" target="1.8" />
@@ -27,8 +31,10 @@
       <module name="log4j2" target="1.8" />
       <module name="logback" target="1.8" />
       <module name="mybatis-test" target="1.8" />
+      <module name="single-eureka" target="1.8" />
       <module name="springcloud-solutions" target="1.8" />
       <module name="UAA" target="1.8" />
+      <module name="zuul-gateway" target="1.8" />
       <module name="zuulgateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -36,6 +42,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Gen" options="-parameters" />
       <module name="UAA" options="-parameters" />
+      <module name="cluster-eureka" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="conf" options="-parameters" />
       <module name="demo" options="-parameters" />
@@ -47,6 +54,8 @@
       <module name="log4j2" options="-parameters" />
       <module name="logback" options="-parameters" />
       <module name="mybatis-test" options="-parameters" />
+      <module name="single-eureka" options="-parameters" />
+      <module name="zuul-gateway" options="-parameters" />
       <module name="zuulgateway" options="-parameters" />
     </option>
   </component>

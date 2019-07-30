@@ -8,9 +8,9 @@ server:
     application-display-name: ${spring.application.name}
 eureka:
   instance:
-    hostname: gitlab.bryce.com
+    hostname: localhost
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://gitlab.bryce.com:9999/eureka/
+      defaultZone: http://${eureka.instance.hostname}:10222/eureka/
